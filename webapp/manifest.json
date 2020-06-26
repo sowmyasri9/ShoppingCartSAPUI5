@@ -1,0 +1,147 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "LoginPoc.LoginPoc",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		},
+		"dataSources": {
+			"init_data_alias": {
+				"uri": "model/mockData/login.json",
+				"type": "JSON"
+			}
+		},
+		"_version": "1.3.0"
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"_version": "1.3.0",
+		"supportedThemes": []
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "LoginPoc.LoginPoc.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "LoginPoc.LoginPoc.i18n.i18n"
+				}
+			},
+			"LoginModel": {
+				"type": "sap.ui.model.json.JSONModel",
+				"dataSource": "init_data_alias"
+			},
+			"HomeModel": {
+				"type": "sap.ui.model.json.JSONModel"
+			},
+			"CartItemsModel": {
+				"type": "sap.ui.model.json.JSONModel"
+			},
+			"PaymentDetails": {
+				"type": "sap.ui.model.json.JSONModel"
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "LoginPoc.LoginPoc.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"pattern": "",
+				"name": "Login",
+				"view": "Login",
+				"targetAggregation": "pages",
+				"controlId": "app"
+			}, {
+				"pattern": "Home",
+				"name": "Home",
+				"view": "Home",
+				"targetAggregation": "pages",
+				"controlId": "app"
+			}, {
+				"pattern": "CartItems",
+				"name": "CartItems",
+				"view": "CartItems",
+				"targetAggregation": "pages",
+				"controlId": "app"
+			}, {
+				"pattern": "CardPayment",
+				"name": "CardPayment",
+				"view": "CardPayment",
+				"targetAggregation": "pages",
+				"controlId": "app"
+			}],
+			"targets": {
+				"CartItems": {
+					"viewName": "CartItems"
+				},
+				"": {
+					"viewName": "Login"
+				},
+				"Home": {
+					"viewName": "Home"
+				},
+				"CardPayment": {
+					"viewName": "CardPayment"
+				},
+				"Targetapp": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "app",
+					"viewName": "app"
+				}
+			}
+		},
+		"_version": "1.2.0"
+	}
+}

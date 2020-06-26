@@ -1,0 +1,137 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout" controllerName="LoginPoc.LoginPoc.controller.CardPayment">
+	<App id="app">
+		<Page title="Payment Details">
+			<VBox class="sapUiSmallMarginTop">
+				<f:Form id="Address">
+					<f:title>
+						<core:Title text="Address"/>
+					</f:title>
+					<f:layout>
+						<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4"
+							emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+					</f:layout>
+					<f:formContainers>
+						<f:FormContainer class="sapUiLargeMarginTop">
+							<f:formElements>
+								<f:FormElement label="Full Name">
+									<f:fields>
+										<Input liveChange="transformText" maxLength="19" placeholder="Enter Name..."/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Country">
+									<f:fields>
+										<Select id="country" change="selectedCountry" items="{ path: '/countries', sorter: { path: 'name' } }">
+											<core:ListItem text="{name}"/>
+										</Select>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="State">
+									<f:fields>
+										<Select id="state" items="{States}">
+											<core:ListItem text="{state}"/>
+										</Select>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Enter street number">
+									<f:fields>
+										<Input liveChange="enteredText" maxLength="19" placeholder="Street Number"/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="House No">
+									<f:fields>
+										<Input maxLength="19" placeholder="House Number"/>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+					</f:formContainers>
+				</f:Form>
+				<f:Form id="FormChange354">
+					<f:title>
+						<core:Title text="Debit Card Details"/>
+					</f:title>
+					<f:layout>
+						<f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4"
+							emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false"/>
+					</f:layout>
+					<f:formContainers>
+						<f:FormContainer class="sapUiLargeMarginTop">
+							<f:formElements>
+								<f:FormElement label=" ">
+									<f:fields>
+										<Text class="size sapUiSmallMarginTop sapUiSmallMarginBottom" text="Payment Amount :{Payment>/oTotalAmount} "/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Card Number">
+									<f:fields>
+										<Input liveChange="enteredText" maxLength="19" placeholder="Enter Card Number"/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Expiration Date">
+									<f:fields>
+										<Select>
+											<items>
+												<core:Item text="-Month-" key="Month"/>
+												<core:Item text="01/Jan" key="01"/>
+												<core:Item text="02/Feb" key="02"/>
+												<core:Item text="03/Mar" key="03"/>
+												<core:Item text="04/Apr" key="04"/>
+												<core:Item text="05/May" key="05"/>
+												<core:Item text="06/Jun" key="06"/>
+												<core:Item text="07/Jul" key="07"/>
+												<core:Item text="08/Aug" key="08"/>
+												<core:Item text="09/Sep" key="09"/>
+												<core:Item text="10/Oct" key="10"/>
+												<core:Item text="11/Nov" key="11"/>
+												<core:Item text="12/Dec" key="12"/>
+											</items>
+											<layoutData>
+												<l:GridData span=" L2 M2 S4"/>
+											</layoutData>
+										</Select>
+										<Select>
+											<items>
+												<core:Item text="-Year-" key="Year"/>
+												<core:Item text="2011" key="2011"/>
+												<core:Item text="2012" key="2012"/>
+												<core:Item text="2013" key="2013"/>
+												<core:Item text="2014" key="2014"/>
+												<core:Item text="2015" key="2015"/>
+												<core:Item text="2016" key="2016"/>
+												<core:Item text="2017" key="2017"/>
+												<core:Item text="2018" key="2018"/>
+												<core:Item text="2019" key="2019"/>
+												<core:Item text="2020" key="2020"/>
+												<core:Item text="2021" key="2021"/>
+												<core:Item text="2022" key="2022"/>
+											</items>
+											<layoutData>
+												<l:GridData span=" L2 M2 S4"/>
+											</layoutData>
+										</Select>
+										<Input type="Password" maxLength="3" placeholder="CVV/CVC ">
+											<layoutData>
+												<l:GridData span=" L1 M1 S3"/>
+											</layoutData>
+										</Input>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label="Card Holder Name">
+									<f:fields>
+										<Input liveChange="validateName" placeholder="Enter Card Holder Name"/>
+									</f:fields>
+								</f:FormElement>
+								<f:FormElement label=" ">
+									<f:fields>
+										<Button text="Submit"/>
+									</f:fields>
+								</f:FormElement>
+							</f:formElements>
+						</f:FormContainer>
+					</f:formContainers>
+				</f:Form>
+			</VBox>
+		</Page>
+	</App>
+</mvc:View>

@@ -1,0 +1,32 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" 	xmlns:l="sap.ui.layout"  displayBlock="true" controllerName="LoginPoc.LoginPoc.controller.Login"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title1}">
+					<content>
+			<l:VerticalLayout
+		class="sapUiContentPadding"
+		width="50%">
+		<l:content>
+		
+		   <Label text="{i18n>email}"  labelFor="{i18n>inputEmail}"/>
+			<Input
+				id="inputEmail"
+				type="Email"
+				class="sapUiSmallMarginBottom"
+				placeholder="Enter Email ..." />
+		<Label text="{i18n>password}" labelFor="{i18n>passwordInput}"/>
+			<Input
+				id="passwordInput"
+				type="Password"
+				placeholder="Enter password ..." />
+	     <Button text="{i18n>Login}" press="onLogin" />
+		
+					</l:content>
+	</l:VerticalLayout>
+					
+					</content>
+				</Page>
+			</pages>
+		</App>
+</mvc:View>

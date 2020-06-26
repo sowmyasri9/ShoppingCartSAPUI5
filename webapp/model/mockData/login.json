@@ -1,0 +1,108 @@
+{
+	"products": [{
+		"id": 1,
+		"name": "Portable DVD player",
+		"price": 800.00
+	}, {
+		"id": 2,
+		"name": "Astro Laptop 1516",
+		"price": 3500.00
+	}, {
+		"id": 3,
+		"name": "Astro Phone 6",
+		"price": 1000.00
+	}, {
+		"id": 4,
+		"name": "Cordless Mouse",
+		"price": 150.00
+	}, {
+		"id": 5,
+		"name": "Notebook Basic 17",
+		"price": 570.00
+	}, {
+		"id": 6,
+		"name": "Notebook Basic 7",
+		"price": 470.00
+	}, {
+		"id": 7,
+		"name": "Cepat Tablet 8",
+		"price": 170.00
+	}, {
+		"id": 8,
+		"name": "Notebook Pro",
+		"price": 970.00
+	}, {
+		"id": 9,
+		"name": "Mouse",
+		"price": 50.00
+	}, {
+		"id": 10,
+		"name": "Cordless Bluetooth Keyboard",
+		"price": 150.00
+	}],
+	"login": [{
+			"email": "first@gmail.com",
+			"password": "first123"
+		}, {
+			"email": "second@gmail.com",
+			"password": "second123"
+		}, {
+			"email": "third@gmail.com",
+			"password": "third123"
+		},
+
+		{
+			"email": "fourth@gmail.com",
+			"password": "fourth123"
+		}
+	],
+	"countries": [{
+		"name": "Australia",
+		"countrycode": "+61",
+		"states": [{
+			"state": "New South Wales"
+		}, {
+			"state": "Victoria"
+		}, {
+			"state": "Queensland"
+		}, {
+			"state": "Tasmania"
+		}]
+	}, {
+		"name": "India",
+		"countrycode": "+91",
+		"states": [{
+			"state": "Telangana"
+		}, {
+			"state": "Andhra Pradesh"
+		}, {
+			"state": "Maharashtra"
+		}, {
+			"state": "Kerala"
+		}]
+	}, {
+		"name": "Canada",
+		"countrycode": "+1",
+		"states": [{
+			"state": "Ontario"
+		}, {
+			"state": "Quebec"
+		}, {
+			"state": "Nova Scotia"
+		}, {
+			"state": "Alberta"
+		}]
+	}, {
+		"name": "USA",
+		"countrycode": "+1",
+		"states": [{
+			"state": "California"
+		}, {
+			"state": "Texas"
+		}, {
+			"state": "New York"
+		}, {
+			"state": "Minnesota"
+		}]
+	}]
+}

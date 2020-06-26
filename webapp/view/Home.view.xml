@@ -1,0 +1,44 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified"
+	controllerName="LoginPoc.LoginPoc.controller.Home" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>title}">
+				<content >
+					<Table id="products" mode="MultiSelect" items="{/products}">
+						<headerToolbar>
+							<Toolbar>
+								<ToolbarSpacer/>
+								<SearchField width="25%" liveChange="onSearchProducts"/>
+								<Button icon="sap-icon://sort" press="handlePress" tooltip="Sort"/>
+							</Toolbar>
+						</headerToolbar>
+						<columns>
+							<Column width="60em">
+								<Text text="{i18n>Product}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>Price}"/>
+							</Column>
+						
+						</columns>
+						<items>
+							<ColumnListItem type="{i18n>Active}">
+								<cells>
+									<Text text="{name}"/>
+									<u:Currency value="{price}" currency="{i18n>currency}"/>
+								
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<FlexBox alignItems="Center" justifyContent="Center">
+						<items>
+								<Button icon="sap-icon://cart" tooltip="Add items to cart" width="10em" press="onCheck"/>
+						</items>
+					</FlexBox>
+				
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
